@@ -216,7 +216,7 @@ class ScanPresenter constructor(private val context: Context, private val iView:
 
                             }, {
                                 iView.getPaperRect().onCornersNotDetected()
-                            })
+                            }).onError(Throwable("error in subscribe"))
                 }
 
     }
